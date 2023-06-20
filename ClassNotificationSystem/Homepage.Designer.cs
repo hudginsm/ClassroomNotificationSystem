@@ -31,17 +31,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.periodComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.guardiansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assignmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.periodComboBox = new System.Windows.Forms.ToolStripComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.filterDateTime = new System.Windows.Forms.DateTimePicker();
+            this.filterComboBox = new System.Windows.Forms.ComboBox();
             this.fltrBtn = new System.Windows.Forms.Button();
             this.clrBtn = new System.Windows.Forms.Button();
-            this.svchngBtn = new System.Windows.Forms.Button();
             this.clrAllBtn = new System.Windows.Forms.Button();
+            this.updLbl = new System.Windows.Forms.Label();
+            this.addNewBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,42 +73,9 @@
             this.studentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.periodComboBox});
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.studentsToolStripMenuItem.Text = "Students";
             this.studentsToolStripMenuItem.Click += new System.EventHandler(this.studentsToolStripMenuItem_Click);
-            // 
-            // guardiansToolStripMenuItem
-            // 
-            this.guardiansToolStripMenuItem.Name = "guardiansToolStripMenuItem";
-            this.guardiansToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.guardiansToolStripMenuItem.Text = "Guardians";
-            this.guardiansToolStripMenuItem.Click += new System.EventHandler(this.guardiansToolStripMenuItem_Click);
-            // 
-            // assignmentsToolStripMenuItem
-            // 
-            this.assignmentsToolStripMenuItem.Name = "assignmentsToolStripMenuItem";
-            this.assignmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.assignmentsToolStripMenuItem.Text = "Assignments";
-            this.assignmentsToolStripMenuItem.Click += new System.EventHandler(this.assignmentsToolStripMenuItem_Click);
-            // 
-            // gradesToolStripMenuItem
-            // 
-            this.gradesToolStripMenuItem.Name = "gradesToolStripMenuItem";
-            this.gradesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.gradesToolStripMenuItem.Text = "Grades";
-            this.gradesToolStripMenuItem.Click += new System.EventHandler(this.gradesToolStripMenuItem_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 24);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1338, 636);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.Visible = false;
             // 
             // periodComboBox
             // 
@@ -124,22 +92,57 @@
             this.periodComboBox.Text = "Select Period";
             this.periodComboBox.SelectedIndexChanged += new System.EventHandler(this.studentsToolStripMenuItem_Click);
             // 
-            // dateTimePicker1
+            // guardiansToolStripMenuItem
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 693);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.Visible = false;
+            this.guardiansToolStripMenuItem.Name = "guardiansToolStripMenuItem";
+            this.guardiansToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.guardiansToolStripMenuItem.Text = "Guardians";
+            this.guardiansToolStripMenuItem.Click += new System.EventHandler(this.guardiansToolStripMenuItem_Click);
             // 
-            // comboBox1
+            // assignmentsToolStripMenuItem
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 666);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Visible = false;
+            this.assignmentsToolStripMenuItem.Name = "assignmentsToolStripMenuItem";
+            this.assignmentsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.assignmentsToolStripMenuItem.Text = "Assignments";
+            this.assignmentsToolStripMenuItem.Click += new System.EventHandler(this.assignmentsToolStripMenuItem_Click);
+            // 
+            // gradesToolStripMenuItem
+            // 
+            this.gradesToolStripMenuItem.Name = "gradesToolStripMenuItem";
+            this.gradesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.gradesToolStripMenuItem.Text = "Grades";
+            this.gradesToolStripMenuItem.Click += new System.EventHandler(this.gradesToolStripMenuItem_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 24);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1338, 636);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.Visible = false;
+            this.dataGridView1.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cell_Update);
+            // 
+            // filterDateTime
+            // 
+            this.filterDateTime.CustomFormat = "";
+            this.filterDateTime.Location = new System.Drawing.Point(12, 693);
+            this.filterDateTime.Name = "filterDateTime";
+            this.filterDateTime.Size = new System.Drawing.Size(200, 20);
+            this.filterDateTime.TabIndex = 2;
+            this.filterDateTime.Visible = false;
+            // 
+            // filterComboBox
+            // 
+            this.filterComboBox.FormattingEnabled = true;
+            this.filterComboBox.Location = new System.Drawing.Point(12, 666);
+            this.filterComboBox.Name = "filterComboBox";
+            this.filterComboBox.Size = new System.Drawing.Size(200, 21);
+            this.filterComboBox.TabIndex = 3;
+            this.filterComboBox.Visible = false;
             // 
             // fltrBtn
             // 
@@ -150,6 +153,7 @@
             this.fltrBtn.Text = "Filter";
             this.fltrBtn.UseVisualStyleBackColor = true;
             this.fltrBtn.Visible = false;
+            this.fltrBtn.Click += new System.EventHandler(this.fltrBtn_Click);
             // 
             // clrBtn
             // 
@@ -160,15 +164,7 @@
             this.clrBtn.Text = "Clear";
             this.clrBtn.UseVisualStyleBackColor = true;
             this.clrBtn.Visible = false;
-            // 
-            // svchngBtn
-            // 
-            this.svchngBtn.Location = new System.Drawing.Point(1058, 679);
-            this.svchngBtn.Name = "svchngBtn";
-            this.svchngBtn.Size = new System.Drawing.Size(131, 63);
-            this.svchngBtn.TabIndex = 6;
-            this.svchngBtn.Text = "Save";
-            this.svchngBtn.UseVisualStyleBackColor = true;
+            this.clrBtn.Click += new System.EventHandler(this.clrBtn_Click);
             // 
             // clrAllBtn
             // 
@@ -178,16 +174,36 @@
             this.clrAllBtn.TabIndex = 7;
             this.clrAllBtn.Text = "Clear";
             this.clrAllBtn.UseVisualStyleBackColor = true;
+            this.clrAllBtn.Click += new System.EventHandler(this.clrAllBtn_Click);
+            // 
+            // updLbl
+            // 
+            this.updLbl.AutoSize = true;
+            this.updLbl.Location = new System.Drawing.Point(486, 669);
+            this.updLbl.Name = "updLbl";
+            this.updLbl.Size = new System.Drawing.Size(0, 13);
+            this.updLbl.TabIndex = 8;
+            this.updLbl.Visible = false;
+            // 
+            // addNewBtn
+            // 
+            this.addNewBtn.Location = new System.Drawing.Point(1058, 679);
+            this.addNewBtn.Name = "addNewBtn";
+            this.addNewBtn.Size = new System.Drawing.Size(131, 63);
+            this.addNewBtn.TabIndex = 9;
+            this.addNewBtn.UseVisualStyleBackColor = true;
+            this.addNewBtn.Visible = false;
             // 
             // Homepage
             // 
             this.ClientSize = new System.Drawing.Size(1338, 754);
+            this.Controls.Add(this.addNewBtn);
+            this.Controls.Add(this.updLbl);
             this.Controls.Add(this.clrAllBtn);
-            this.Controls.Add(this.svchngBtn);
             this.Controls.Add(this.clrBtn);
             this.Controls.Add(this.fltrBtn);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.filterComboBox);
+            this.Controls.Add(this.filterDateTime);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -209,12 +225,13 @@
         private System.Windows.Forms.ToolStripMenuItem gradesToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripComboBox periodComboBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker filterDateTime;
+        private System.Windows.Forms.ComboBox filterComboBox;
         private System.Windows.Forms.Button fltrBtn;
         private System.Windows.Forms.Button clrBtn;
-        private System.Windows.Forms.Button svchngBtn;
         private System.Windows.Forms.Button clrAllBtn;
+        private System.Windows.Forms.Label updLbl;
+        private System.Windows.Forms.Button addNewBtn;
     }
 }
 #endregion
