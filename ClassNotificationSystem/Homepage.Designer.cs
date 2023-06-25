@@ -121,15 +121,14 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.Location = new System.Drawing.Point(0, 24);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1338, 636);
+            this.dataGridView1.Size = new System.Drawing.Size(1338, 691);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.Visible = false;
-            this.dataGridView1.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cell_Update);
             // 
             // filterDateTime
             // 
             this.filterDateTime.CustomFormat = "";
-            this.filterDateTime.Location = new System.Drawing.Point(12, 693);
+            this.filterDateTime.Location = new System.Drawing.Point(12, 748);
             this.filterDateTime.Name = "filterDateTime";
             this.filterDateTime.Size = new System.Drawing.Size(200, 20);
             this.filterDateTime.TabIndex = 2;
@@ -138,7 +137,7 @@
             // filterComboBox
             // 
             this.filterComboBox.FormattingEnabled = true;
-            this.filterComboBox.Location = new System.Drawing.Point(12, 666);
+            this.filterComboBox.Location = new System.Drawing.Point(12, 721);
             this.filterComboBox.Name = "filterComboBox";
             this.filterComboBox.Size = new System.Drawing.Size(200, 21);
             this.filterComboBox.TabIndex = 3;
@@ -146,7 +145,7 @@
             // 
             // fltrBtn
             // 
-            this.fltrBtn.Location = new System.Drawing.Point(12, 719);
+            this.fltrBtn.Location = new System.Drawing.Point(12, 774);
             this.fltrBtn.Name = "fltrBtn";
             this.fltrBtn.Size = new System.Drawing.Size(75, 23);
             this.fltrBtn.TabIndex = 4;
@@ -157,7 +156,7 @@
             // 
             // clrBtn
             // 
-            this.clrBtn.Location = new System.Drawing.Point(137, 719);
+            this.clrBtn.Location = new System.Drawing.Point(137, 774);
             this.clrBtn.Name = "clrBtn";
             this.clrBtn.Size = new System.Drawing.Size(75, 23);
             this.clrBtn.TabIndex = 5;
@@ -168,9 +167,9 @@
             // 
             // clrAllBtn
             // 
-            this.clrAllBtn.Location = new System.Drawing.Point(1195, 679);
+            this.clrAllBtn.Location = new System.Drawing.Point(1195, 721);
             this.clrAllBtn.Name = "clrAllBtn";
-            this.clrAllBtn.Size = new System.Drawing.Size(131, 63);
+            this.clrAllBtn.Size = new System.Drawing.Size(131, 47);
             this.clrAllBtn.TabIndex = 7;
             this.clrAllBtn.Text = "Clear";
             this.clrAllBtn.UseVisualStyleBackColor = true;
@@ -179,7 +178,7 @@
             // updLbl
             // 
             this.updLbl.AutoSize = true;
-            this.updLbl.Location = new System.Drawing.Point(486, 669);
+            this.updLbl.Location = new System.Drawing.Point(1055, 784);
             this.updLbl.Name = "updLbl";
             this.updLbl.Size = new System.Drawing.Size(0, 13);
             this.updLbl.TabIndex = 8;
@@ -187,16 +186,17 @@
             // 
             // addNewBtn
             // 
-            this.addNewBtn.Location = new System.Drawing.Point(1058, 679);
+            this.addNewBtn.Location = new System.Drawing.Point(1058, 721);
             this.addNewBtn.Name = "addNewBtn";
-            this.addNewBtn.Size = new System.Drawing.Size(131, 63);
+            this.addNewBtn.Size = new System.Drawing.Size(131, 47);
             this.addNewBtn.TabIndex = 9;
             this.addNewBtn.UseVisualStyleBackColor = true;
             this.addNewBtn.Visible = false;
+            this.addNewBtn.Click += new System.EventHandler(this.addNewBtn_Click);
             // 
             // Homepage
             // 
-            this.ClientSize = new System.Drawing.Size(1338, 754);
+            this.ClientSize = new System.Drawing.Size(1338, 810);
             this.Controls.Add(this.addNewBtn);
             this.Controls.Add(this.updLbl);
             this.Controls.Add(this.clrAllBtn);
