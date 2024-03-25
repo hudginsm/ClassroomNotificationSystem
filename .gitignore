@@ -396,4 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-ClassNotificationSystem/obj/Debug/ClassNotificationSystem.csproj.AssemblyReference.cache
+
+# Others
+*.cache
